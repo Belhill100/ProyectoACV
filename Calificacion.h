@@ -1,6 +1,6 @@
-//#ifndef	CALIFICACION_H
+#ifndef	CALIFICACION_H
 //Guardas
-//#define CALIFICACION_H
+#define CALIFICACION_H
 
 #include <iostream>
 #include <stdlib.h>
@@ -31,4 +31,4 @@ public:           //Metodos
 	string getComentarios();
     void setComentarios ();
 };
-//#endif /* !CALIFICACION_H */
+/#endif /* !CALIFICACION_H */
