@@ -20,7 +20,15 @@ private: //Atributos
 
 public:           //Metodos
 	Calificacion(); //Constructor
+    Calificacion(int id, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios);
 	// Gets and sets
-	
+    int getId();
+    void setId(int id);
+    float setCalificacionJuradoUno();
+	void setCalificacionJuradoUno(float calificacionJuradoUno);
+    float setCalificacionJuradoDos();
+	void setCalificacionJuradoDos(float calificacionJuradoDos);
+	string getComentarios();
+    void setComentarios ();
 };
 //#endif /* !CALIFICACION_H */
