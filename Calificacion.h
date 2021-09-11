@@ -1,6 +1,6 @@
-//#ifndef	CALIFICACION_H
+#ifndef	CALIFICACION_H
 //Guardas
-//#define CALIFICACION_H
+#define CALIFICACION_H
 
 #include <iostream>
 #include <stdlib.h>
@@ -20,7 +20,15 @@ private: //Atributos
 
 public:           //Metodos
 	Calificacion(); //Constructor
+    Calificacion(int id, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios);
 	// Gets and sets
-	
+    int getId();
+    void setId(int id);
+    float setCalificacionJuradoUno();
+	void setCalificacionJuradoUno(float calificacionJuradoUno);
+    float setCalificacionJuradoDos();
+	void setCalificacionJuradoDos(float calificacionJuradoDos);
+	string getComentarios();
+    void setComentarios ();
 };
-//#endif /* !CALIFICACION_H */
+/#endif /* !CALIFICACION_H */

@@ -12,6 +12,10 @@ using std::cout;
 using std::endl;
 using std::string;
 
+typedef enum{
+   APROBADO, RECHAZADO
+}Estado;
+
 class Acta{
 private: //Atributos
 	string fecha;
@@ -24,7 +28,7 @@ private: //Atributos
     string nombreJuradoDos;
     Calificacion calificaciones;
     string comentariosGenerales;
-    estado;
+    Estado estado;
     float notaFinal;
 
 public:           //Metodos
