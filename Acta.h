@@ -1,9 +1,11 @@
-//#ifndef	ACTA_H
+#ifndef	ACTA_H
 //Guardas
-//#define ACTA_H
+#define ACTA_H
 
 #include <iostream>
 #include <stdlib.h>
+#include <vector>
+#include <iterator>
 #include "Calificacion.h"
 
 // Inclusion de librerias
@@ -11,6 +13,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
+using std::vector;
 
 typedef enum{
    APROBADO, RECHAZADO
@@ -26,14 +29,17 @@ private: //Atributos
     string nombreCoDirector;
     string nombreJuradoUno;
     string nombreJuradoDos;
-    Calificacion calificaciones;
+    vector<Calificacion> calificaciones;
     string comentariosGenerales;
     Estado estado;
     float notaFinal;
 
 public:           //Metodos
 	Acta(); //Constructor
+    void exportarTexto();
+    void verResumen();
+    void CalcularNota();
 	// Gets and sets
     
 };
-//#endif /* !ACTA_H */
+#endif /* !ACTA_H */
