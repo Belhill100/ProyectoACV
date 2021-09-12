@@ -2,10 +2,10 @@
 #include "Calificacion.h"
 
 Calificacion::Calificacion(){
-    this->id = -1; //para que se sepa que no es valido, se debe inicializar
-    float->calificacionJuradoUno = 0;
-    float->calificacionJuradoDos = 0;
-    string->comentarios = "No hay comentarios";
+    this->id; //para que se sepa que no es valido, se debe inicializar
+    this->calificacionJuradoUno;
+    this->calificacionJuradoDos;
+    this->comentarios;
 }
 
 Calificacion::Calificacion(int id, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios){

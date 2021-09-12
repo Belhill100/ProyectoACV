@@ -24,11 +24,11 @@ public:           //Metodos
 	// Gets and sets
     int getId();
     void setId(int id);
-    float setCalificacionJuradoUno();
+    float getCalificacionJuradoUno();
 	void setCalificacionJuradoUno(float calificacionJuradoUno);
-    float setCalificacionJuradoDos();
+    float getCalificacionJuradoDos();
 	void setCalificacionJuradoDos(float calificacionJuradoDos);
 	string getComentarios();
     void setComentarios ();
 };
-/#endif /* !CALIFICACION_H */
+#endif /* !CALIFICACION_H */
