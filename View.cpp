@@ -1,12 +1,10 @@
 #include "View.h"
-#include "Acta.h"
+#include "Archivo.h"
 
-View::View()
-{
+View::View(){
 }
 
-void View::mostrarMenu()
-{
+void View::mostrarMenu(){
     int opcion = -1;
     do
     {

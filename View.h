@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <stdlib.h>
-#include "Acta.h"
+#include "Archivo.h"
 
 using std::cin;
 using std::cout;

@@ -22,7 +22,7 @@ private: //Atributos
 
 public: //Metodos
     Criterio(); //Constructor
-    Criterio(int ID, string texto, float porcentaje);
+    Criterio(int ID, string texto, float porcentaje); //Constructor con parametros
 	// Gets and sets
     int getID();
     void setID(int id);
