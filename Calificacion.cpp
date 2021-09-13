@@ -2,25 +2,24 @@
 #include "Calificacion.h"
 
 Calificacion::Calificacion(){
-    this->id; //para que se sepa que no es valido, se debe inicializar
-    this->calificacionJuradoUno;
-    this->calificacionJuradoDos;
-    this->comentarios;
+    this->calificacionJuradoUno = 0;
+    this->calificacionJuradoDos = 0;
+    this->comentarios = "Vacio";
 }
 
-Calificacion::Calificacion(int id, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios){
-    this->id = id;
+Calificacion::Calificacion(Criterio criterio, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios){
+    this->criterio = criterio;
     this->calificacionJuradoUno = calificacionJuradoUno;
     this->calificacionJuradoDos = calificacionJuradoDos;
     this->comentarios = comentarios;
 }
 
-int Calificacion::getId(){
-    return id;
+Criterio Calificacion::getCriterio(){
+    return criterio;
 }
 
-void Calificacion::setId(int id){
-    this->id = id;
+void Calificacion::setCriterio(Criterio criterio){
+    this->criterio = criterio;
 }
 
 float Calificacion::getCalificacionJuradoUno(){

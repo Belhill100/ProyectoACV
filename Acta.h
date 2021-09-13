@@ -16,7 +16,7 @@ using std::string;
 using std::vector;
 
 typedef enum{
-   APROBADO, RECHAZADO
+   APROBADO, REPROBADO
 }Estado;
 
 typedef enum{
@@ -41,9 +41,10 @@ private: //Atributos
 
 public:           //Metodos
 	Acta(); //Constructor
-    Acta();
-    void exportarTexto();
-    void verResumen();
+    Acta(string fecha, int numActa, string nombreEstudiante, string nombreTrabajo,
+    TipoTrabajo tipoTrabajo, string nombreDirector, string nombreCoDirector, string nombreJuradoUno,
+    string nombreJuradoDos, string comentariosGenerales, Estado estado, float notaFinal);
+    //Se calcula la nota final teniendo en cuenta las calificaciones parciales y porcentajes
     void CalcularNota();
 	// Gets and sets
     string getFecha();
