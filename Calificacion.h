@@ -31,4 +31,4 @@ public:           //Metodos
 	string getComentarios();
     void setComentarios ();
 };
-/#endif /* !CALIFICACION_H */
+#endif /* !CALIFICACION_H */
