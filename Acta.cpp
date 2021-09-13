@@ -1,14 +1,14 @@
 #include <iostream>
 #include "Acta.h"
 	
-    Acta::Acta(){
+    Acta::Acta(){//constructor por defecto
         this->numActa = -1; //para que sepa que se debe inicializar
         this->estado = REPROBADO;
         this->notaFinal = 0;
     }
     Acta::Acta(string fecha, int numActa, string nombreEstudiante, string nombreTrabajo,
     TipoTrabajo tipoTrabajo, string nombreDirector, string nombreCoDirector, string nombreJuradoUno,
-    string nombreJuradoDos, string comentariosGenerales, Estado estado, float notaFinal){
+    string nombreJuradoDos, string comentariosGenerales, Estado estado, float notaFinal){//constructor con parametros
         this->fecha = fecha;
         this->numActa = numActa;
         this->nombreEstudiante = nombreEstudiante;

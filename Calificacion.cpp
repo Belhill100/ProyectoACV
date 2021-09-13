@@ -1,13 +1,14 @@
 #include <iostream>
 #include "Calificacion.h"
 
-Calificacion::Calificacion(){
+Calificacion::Calificacion(){//constructor por defecto
     this->calificacionJuradoUno = 0;
     this->calificacionJuradoDos = 0;
     this->comentarios = "Vacio";
 }
 
 Calificacion::Calificacion(Criterio criterio, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios){
+    //constructor ccon parametros
     this->criterio = criterio;
     this->calificacionJuradoUno = calificacionJuradoUno;
     this->calificacionJuradoDos = calificacionJuradoDos;
