@@ -35,5 +35,6 @@ public:
 	void agregarActa();
 	void calificarActa();
 	void mostrarActa();
+	void resumenActas();
 };
 #endif

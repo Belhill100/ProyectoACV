@@ -159,3 +159,18 @@ void Archivo::mostrarActa(){
         }
     }
 }
+
+void Archivo::resumenActas(){
+    int numActa;
+    for(map<int, Acta>::iterator pActa = actas.begin(); pActa != actas.end(); pActa++){
+        Acta temp = pActa->second;
+        cout << "ACTA #" << temp.getNumActa();
+        cout << "\nFecha: " << temp.getFecha();
+        cout << "\nAutor: " << temp.getNombreEstudiante();
+        cout << "\nNombre Director: " << temp.getNombreDirector();
+        cout << "\nNombre Jurado #1: " << temp.getNombreJuradoUno();
+        cout << "\nNombre Jurado #2: " << temp.getNombreJuradoDos();
+        cout << "\nEstado del Trabajo: " << temp.getEstado();
+        cout << "\nNota Final: " << temp.getNotaFinal();
+    }
+}
