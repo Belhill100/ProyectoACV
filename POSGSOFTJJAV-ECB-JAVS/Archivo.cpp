@@ -32,9 +32,22 @@ void Archivo::setNombre(string nombre){
 }
 
 void Archivo::agregarCriterio(Criterio criterio){
-    criterio.setID(numCriterios);
-    numCriterios++;
-    criterios.push_back(criterio);
+    int cont = 1;
+    float porcentaje;
+    string texto;
+    for(map<int, Criterio>::iterator pCriterio = criterios.begin(); pCriterio != criterios.end(); pCriterio++){
+        Criterio temp = pCriterio->second;
+        cout << "Ingrese el porcentaje del criterio " << temp.getTexto << ": ";
+        cin >> porcentaje;
+        temp.setPorcentaje(porcentaje);
+        cont++;
+    }
+    cout << "Ingrese el porcentaje del nuevo criterio: ";
+    cin >> porcentaje;
+    cout << "Ingrese el texto del nuevo criterio: ";
+    cin >> texto;
+    Criterio criterioNuevo(cont, texto, porcentaje);
+    this->criterios[cont] = criterioNuevo;
 }
 
 int Archivo::getNumActas(){
