@@ -32,8 +32,6 @@ public:
 	int getNumActas();
 	void agregarCriterio();
 	void modificarCriterio();
-	void agregarActa(string fecha, string nombreEstudiante, string nombreTrabajo,
-    TipoTrabajo tipoTrabajo, string nombreDirector, string nombreCoDirector, string nombreJuradoUno,
-    string nombreJuradoDos, string comentariosGenerales, Estado estado);
+	void agregarActa();
 };
 #endif

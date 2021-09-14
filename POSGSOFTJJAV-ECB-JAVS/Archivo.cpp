@@ -74,21 +74,41 @@ void Archivo::modificarCriterio(){
 }
 
 
-void Archivo::agregarActa(string fecha, string nombreEstudiante, string nombreTrabajo,
-    TipoTrabajo tipoTrabajo, string nombreDirector, string nombreCoDirector, string nombreJuradoUno,
-    string nombreJuradoDos, string comentariosGenerales, Estado estado){
-        Acta actTemporal;
-        actTemporal.setNumActa(numActas);
-        numActas++;
-        actTemporal.setFecha(fecha);
-        actTemporal.setNombreEstudiante(nombreEstudiante);
-        actTemporal.setNombreTrabajo(nombreTrabajo);
-        actTemporal.setTipoTrabajo(tipoTrabajo);
-        actTemporal.setNombreDirector(nombreDirector);
-        actTemporal.setNombreCoDirector(nombreCoDirector);
-        actTemporal.setNombreJuradoUno(nombreJuradoUno);
-        actTemporal.setNombreJuradoDos(nombreJuradoDos);
-        actTemporal.setComentariosGenerales(comentariosGenerales);
-        actTemporal.setEstado(estado);
-        actTemporal.CalcularNota();
+void Archivo::agregarActa(){
+    Estado estado;
+    Acta actTemporal;
+    string temporal;
+    actTemporal.setNumActa(numActas);
+    numActas++;
+    cout << "Ingrese la fecha : ";
+    getline(cin, temporal);
+    actTemporal.setFecha(temporal);
+    fflush;
+    cout << "Ingrese el nombre del autor : ";
+    getline(cin, temporal);
+    actTemporal.setNombreEstudiante(temporal);
+    fflush;
+    cout << "Ingrese el nombre del trabajo : ";
+    getline(cin, temporal);
+    actTemporal.setNombreTrabajo(temporal);
+    fflush;
+    cout << "Ingrese el nombre del director : ";
+    getline(cin, temporal);
+    actTemporal.setNombreDirector(temporal);
+    fflush;
+    cout << "Ingrese el nombre del co director en caso de haber uno, si no, escriba 'Vacio' : ";
+    getline(cin, temporal);
+    actTemporal.setNombreCoDirector(temporal);
+    fflush;
+    cout << "Ingrese el nombre del jurado uno : ";
+    getline(cin, temporal);
+    actTemporal.setNombreJuradoUno(temporal);
+    fflush;
+    cout << "Ingrese el nombre del jurado dos : ";
+    getline(cin, temporal);
+    actTemporal.setNombreJuradoDos(temporal);
+    fflush;
+    cout << "Ingrese si el trabajo es de investigacion o si es aplicado : ";
+    cin >> estado;
+    actTemporal.setEstado(estado);
 }
