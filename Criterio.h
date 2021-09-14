@@ -27,7 +27,7 @@ public: //Metodos
     int getID();
     void setID(int id);
     string getTexto();
-    void setTexto ();
+    void setTexto(string texto);
     float getPorcentaje();
     void setPorcentaje(float porcentaje);
 };

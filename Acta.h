@@ -41,7 +41,7 @@ private: //Atributos
 
 public:           //Metodos
 	Acta(); //Constructor
-    Acta(string fecha, int numActa, string nombreEstudiante, string nombreTrabajo,
+    Acta(string fecha, string nombreEstudiante, string nombreTrabajo,
     TipoTrabajo tipoTrabajo, string nombreDirector, string nombreCoDirector, string nombreJuradoUno,
     string nombreJuradoDos, string comentariosGenerales, Estado estado, float notaFinal);
     //Se calcula la nota final teniendo en cuenta las calificaciones parciales y porcentajes

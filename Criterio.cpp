@@ -2,9 +2,9 @@
 #include "Criterio.h"
 
 Criterio::Criterio(){ //Constructor
-    this->ID; 
-    this->texto;
-    this->porcentaje;
+    this->ID = -1;//para que sepa que se debe inicializar 
+    this->texto = "Vacio";
+    this->porcentaje = 0;
 }
 
 Criterio::Criterio(int ID, string texto, float porcentaje){ //Constructor con parametros
