@@ -17,5 +17,6 @@ Esta funcionalidad solo es accedida por un jurado y permite calificar las actas 
 #### 3.Exportar acta
 Esta funcionalidad permite generar un reporte con el acta y guardarla en un archivo .txt.
 #### 4.Modificar Criterios
-
+Esta funcion le permite al director modificar los criterios para una calificacion.
 #### 5.Ver Historicos
+Como la directora a veces necesita ver un resumen de las actas, esta funcionalidad le permite obtener un resumen de las actas creadas y calificadas, este resumen se guarda en un archivo cuando termina el programa y se carga cuando se incia.
