@@ -127,6 +127,9 @@ void Archivo::agregarActa(){
     }else{
         actTemporal.setTipoTrabajo(APLICADO);
     }
+    for(map<int, Criterio>::iterator pCriterio = criterios.begin(); pCriterio != criterios.end(); pCriterio++){
+        actTemporal.asignarCalificacion(pCriterio->second);
+    }
     actas[actTemporal.getNumActa()] = actTemporal;
 }
 

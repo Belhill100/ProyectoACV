@@ -46,6 +46,7 @@ public:           //Metodos
     string nombreJuradoDos, string comentariosGenerales, Estado estado, float notaFinal);
     //Se calcula la nota final teniendo en cuenta las calificaciones parciales y porcentajes
     void calcularNota();
+    void asignarCalificacion(Criterio criterio);
     void calificarActa();
 	// Gets and sets
     string getFecha();

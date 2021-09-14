@@ -22,7 +22,7 @@ private:
 	int numActas;
 	int numCriterios;
 	map<int, Criterio> criterios;
-    map<string, Acta> actas; 
+    map<int, Acta> actas; 
 
 public:		
 	Archivo();

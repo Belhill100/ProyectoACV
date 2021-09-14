@@ -43,6 +43,6 @@ string Calificacion::getComentarios(){
     return comentarios;
 }
 
-void Calificacion::setComentarios(){
+void Calificacion::setComentarios(string comentarios){
     this->comentarios = comentarios;
 }

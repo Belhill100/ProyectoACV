@@ -38,12 +38,18 @@
         }
     }
 	
+void Acta::asignarCalificacion(Criterio criterio){
+    Calificacion cal;
+    cal.setCriterio(criterio);
+    calificaciones.push_back(cal);
+}
+
 void Acta::calificarActa(){
     float calUno, calDos;
     Criterio critTemp;
     string text;
     for (vector<Calificacion>::iterator pCalificacion = calificaciones.begin();
-		pCalificacion != calificaciones.end(); pCalificacion++){
+		 pCalificacion != calificaciones.end(); pCalificacion++){
         critTemp =  pCalificacion->getCriterio();
 		cout << "Ingrese la calificacion del criterio " << critTemp.getID() << "del jurado uno : ";
         cin >> calUno;
@@ -57,99 +63,99 @@ void Acta::calificarActa(){
         pCalificacion->setComentarios(text);
 	    }
     calcularNota();
-    
+
 }
 
-    string Acta::getFecha(){
-        return fecha;
-    }
-    void Acta::setFecha(string fecha){
-        this->fecha = fecha;
-    }
+string Acta::getFecha(){
+    return fecha;
+}
+void Acta::setFecha(string fecha){
+    this->fecha = fecha;
+}
 
-    int Acta::getNumActa(){
-        return numActa;
-    }
+int Acta::getNumActa(){
+    return numActa;
+}
 
-    void Acta::setNumActa(int numActa){
-        this->numActa = numActa;
-    }
+void Acta::setNumActa(int numActa){
+    this->numActa = numActa;
+}
 
-    string Acta::getNombreEstudiante(){
-        return nombreEstudiante;
-    }
+string Acta::getNombreEstudiante(){
+    return nombreEstudiante;
+}
 
-    void Acta::setNombreEstudiante(string nombreEstudiante){
-        this->nombreEstudiante = nombreEstudiante;
-    }
+void Acta::setNombreEstudiante(string nombreEstudiante){
+    this->nombreEstudiante = nombreEstudiante;
+}
 
-    string Acta::getNombreTrabajo(){
-        return nombreTrabajo;
-    }
+string Acta::getNombreTrabajo(){
+    return nombreTrabajo;
+}
 
-    void Acta::setNombreTrabajo(string nombreTrabajo){
-        this->nombreTrabajo;
-    }
+void Acta::setNombreTrabajo(string nombreTrabajo){
+    this->nombreTrabajo;
+}
 
-    TipoTrabajo Acta::getTipoTrabajo(){
-        return tipoTrabajo;
-    }
-    void Acta::setTipoTrabajo(TipoTrabajo tipoTrabajo){
-        this->tipoTrabajo = tipoTrabajo;
-    }
+TipoTrabajo Acta::getTipoTrabajo(){
+    return tipoTrabajo;
+}
+void Acta::setTipoTrabajo(TipoTrabajo tipoTrabajo){
+    this->tipoTrabajo = tipoTrabajo;
+}
 
-    string Acta::getNombreDirector(){
-        return nombreDirector;
-    }
+string Acta::getNombreDirector(){
+    return nombreDirector;
+}
 
-    void Acta::setNombreDirector(string nombreDirecctor){
-        this->nombreDirector = nombreDirector;
-    }
+void Acta::setNombreDirector(string nombreDirecctor){
+    this->nombreDirector = nombreDirector;
+}
 
-    string Acta::getNombreCoDirector(){
-        return nombreCoDirector;
-    }
+string Acta::getNombreCoDirector(){
+    return nombreCoDirector;
+}
 
-    void Acta::setNombreCoDirector(string nombreCoDirector){
-        this->nombreCoDirector;
-    }
+void Acta::setNombreCoDirector(string nombreCoDirector){
+    this->nombreCoDirector;
+}
 
-    string Acta::getNombreJuradoUno(){
-        return nombreJuradoUno;
-    }
+string Acta::getNombreJuradoUno(){
+    return nombreJuradoUno;
+}
 
-    void Acta::setNombreJuradoUno(string nombreJuradoUno){
-        this->nombreJuradoUno = nombreJuradoUno;
-    }
+void Acta::setNombreJuradoUno(string nombreJuradoUno){
+    this->nombreJuradoUno = nombreJuradoUno;
+}
 
-    string Acta::getNombreJuradoDos(){
-        return nombreJuradoDos;
-    }
+string Acta::getNombreJuradoDos(){
+    return nombreJuradoDos;
+}
 
-    void Acta::setNombreJuradoDos(string nombreJuradoDos){
-        this->nombreJuradoDos = nombreJuradoDos;
-    }
+void Acta::setNombreJuradoDos(string nombreJuradoDos){
+    this->nombreJuradoDos = nombreJuradoDos;
+}
 
-    string Acta::getComentariosGenerales(){
-        return comentariosGenerales;
-    }
+string Acta::getComentariosGenerales(){
+    return comentariosGenerales;
+}
 
-    void Acta::setComentariosGenerales(string comentariosGenerales){
-        this->comentariosGenerales = comentariosGenerales;
-    }
+void Acta::setComentariosGenerales(string comentariosGenerales){
+    this->comentariosGenerales = comentariosGenerales;
+}
 
-    Estado Acta::getEstado(){
-        return estado;
-    }
+Estado Acta::getEstado(){
+    return estado;
+}
 
-    void Acta::setEstado(Estado estado){
-        this->estado = estado;
-    }
+void Acta::setEstado(Estado estado){
+    this->estado = estado;
+}
 
-    float Acta::getNotaFinal(){
-        return notaFinal;
-    }
+float Acta::getNotaFinal(){
+    return notaFinal;
+}
 
-    void Acta::setNotaFinal(float notaFinal){
-        this->notaFinal = notaFinal;
-    }
+void Acta::setNotaFinal(float notaFinal){
+    this->notaFinal = notaFinal;
+}
