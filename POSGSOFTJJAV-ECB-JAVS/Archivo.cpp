@@ -75,7 +75,7 @@ void Archivo::modificarCriterio(){
 
 
 void Archivo::agregarActa(){
-    Estado estado;
+    int tipo;
     Acta actTemporal;
     string temporal;
     actTemporal.setNumActa(numActas);
@@ -108,7 +108,11 @@ void Archivo::agregarActa(){
     getline(cin, temporal);
     actTemporal.setNombreJuradoDos(temporal);
     fflush;
-    cout << "Ingrese si el trabajo es de investigacion o si es aplicado : ";
-    cin >> estado;
-    actTemporal.setEstado(estado);
+    cout << "Ingrese 1 si el trabajo es de investigacion o 0 si es aplicado : ";
+    cin >> tipo;
+    if (tipo == 1){
+        actTemporal.setTipoTrabajo(INVESTIGACION);
+    }else{
+        actTemporal.setTipoTrabajo(APLICADO);
+    }
 }
