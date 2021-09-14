@@ -23,7 +23,13 @@ private:
     map<string, Acta> actas; 
 
 public:		
-	Archivo(); 
+	Archivo();
+	Archivo(string nombre); 
 	string getNombre();
+	void setNombre(string nombre);
+	void agregarCriterio(vector<Criterio> criterios);
+	void eliminarCriterio(vector<Criterio> criterios);
+	void cambiarPorcentaje(vector<Criterio> criterios);
+	void cambiarTexto(vector<Criterio> criterios);
 };
 #endif

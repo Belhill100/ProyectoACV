@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include "Criterio.h"
 
 // Inclusion de librerias
 using std::cin;
@@ -13,17 +14,17 @@ using std::string;
 
 class Calificacion {
 private: //Atributos
-	int id;
+	Criterio criterio;
 	float calificacionJuradoUno;
 	float calificacionJuradoDos;
 	string comentarios;
 
 public:           //Metodos
 	Calificacion(); //Constructor
-    Calificacion(int id, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios);
+    Calificacion(Criterio criterio, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios);
 	// Gets and sets
-    int getId();
-    void setId(int id);
+    Criterio getCriterio();
+    void setCriterio(Criterio criterio);
     float getCalificacionJuradoUno();
 	void setCalificacionJuradoUno(float calificacionJuradoUno);
     float getCalificacionJuradoDos();
