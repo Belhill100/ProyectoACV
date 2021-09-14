@@ -21,7 +21,7 @@ private:
 	string nombre;
 	int numActas;
 	int numCriterios;
-	vector<Criterio> criterios;
+	map<int, Criterio> criterios;
     map<string, Acta> actas; 
 
 public:		

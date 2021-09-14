@@ -2,15 +2,26 @@
 #include "Archivo.h"
 
 Archivo::Archivo(){
-    this->nombre = "Vacio";
-    this->numActas = 0;
-    this->numCriterios = 0;
-}
+    this->nombre = "Tesis";
 
-Archivo::Archivo(string nombre){
-    this->nombre = nombre;
-    this->numActas = 0;
-} 
+    Criterio criterioUno(1, "Manejo de Bibliografia", 0.10);
+    Criterio criterioDos(2, "Coherencia y Cohesion", 0.15);
+    Criterio criterioTres(3, "Desarrollo del tema principal", 0.10);
+    Criterio criterioCuatro(4, "Conclusiones Finales", 0.15);
+    Criterio criterioCinco(5, "Presentacion del trabajo", 0.10);
+    Criterio criterioSeis(6, "Investigacion y Profundidad del tema", 0.15);
+    Criterio criterioSiete(7, "Cumplimiento de los objetivos", 0.15);
+    Criterio criterioOcho(8, "Innovacion y Creatividad", 0.10);
+
+    this->criterios[criterioUno.getID()] = criterioUno;
+    this->criterios[criterioDos.getID()] = criterioDos;
+    this->criterios[criterioTres.getID()] = criterioTres;
+    this->criterios[criterioCuatro.getID()] = criterioCuatro;
+    this->criterios[criterioCinco.getID()] = criterioCinco;
+    this->criterios[criterioSeis.getID()] = criterioSeis;
+    this->criterios[criterioSiete.getID()] = criterioSiete;
+    this->criterios[criterioOcho.getID()] = criterioOcho;
+}
 
 string Archivo::getNombre(){
     return nombre;
@@ -18,14 +29,6 @@ string Archivo::getNombre(){
 
 void Archivo::setNombre(string nombre){
     this->nombre =  nombre;
-}
-
-int Archivo::getNumActas(){
-    return numActas;
-}	
-
-int Archivo::getNumCriterios(){
-    return numCriterios;
 }
 
 void Archivo::agregarCriterio(Criterio criterio){
