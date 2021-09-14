@@ -26,7 +26,7 @@ string Criterio::getTexto(){
     return texto;
 }
 
-void Criterio::setTexto(){
+void Criterio::setTexto(string texto){
     this->texto = texto;
 }
 

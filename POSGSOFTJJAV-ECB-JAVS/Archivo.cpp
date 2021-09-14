@@ -31,13 +31,13 @@ void Archivo::setNombre(string nombre){
     this->nombre =  nombre;
 }
 
-void Archivo::agregarCriterio(Criterio criterio){
+void Archivo::agregarCriterio(){
     int cont = 1;
     float porcentaje;
     string texto;
     for(map<int, Criterio>::iterator pCriterio = criterios.begin(); pCriterio != criterios.end(); pCriterio++){
         Criterio temp = pCriterio->second;
-        cout << "Ingrese el porcentaje del criterio " << temp.getTexto << ": ";
+        cout << "Ingrese el porcentaje del criterio " << temp.getTexto() << ": ";
         cin >> porcentaje;
         temp.setPorcentaje(porcentaje);
         cont++;
