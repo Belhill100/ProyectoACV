@@ -73,7 +73,6 @@ void Archivo::modificarCriterio(){
     }   
 }
 
-
 void Archivo::agregarActa(){
     int tipo;
     Acta actTemporal;
@@ -115,4 +114,9 @@ void Archivo::agregarActa(){
     }else{
         actTemporal.setTipoTrabajo(APLICADO);
     }
+    actas[actTemporal.getNumActa()] = actTemporal;
+}
+
+void Archivo::calificarActa(){
+    cout << "Ingrese el numero del acta";
 }

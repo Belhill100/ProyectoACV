@@ -22,7 +22,7 @@
         this->notaFinal = notaFinal;
     }
     
-    void Acta::CalcularNota(){
+    void Acta::calcularNota(){
         float nota = 0;
         Criterio critTemporal;
         for (vector<Calificacion>::iterator pCalificacion = calificaciones.begin();
@@ -38,6 +38,28 @@
         }
     }
 	
+void Acta::calificarActa(){
+    float calUno, calDos;
+    Criterio critTemp;
+    string text;
+    for (vector<Calificacion>::iterator pCalificacion = calificaciones.begin();
+		pCalificacion != calificaciones.end(); pCalificacion++){
+        critTemp =  pCalificacion->getCriterio();
+		cout << "Ingrese la calificacion del criterio " << critTemp.getID() << "del jurado uno : ";
+        cin >> calUno;
+        pCalificacion->setCalificacionJuradoUno(calUno);
+        cout << "Ingrese la calificacion del criterio " << critTemp.getID() << "del jurado dos : ";
+        cin >> calDos;
+        pCalificacion->setCalificacionJuradoDos(calDos);
+        cout << "Ingrese los comentarios para este criterio : ";
+        getline(cin, text);
+        fflush;
+        pCalificacion->setComentarios(text);
+	    }
+    calcularNota();
+    
+}
+
     string Acta::getFecha(){
         return fecha;
     }

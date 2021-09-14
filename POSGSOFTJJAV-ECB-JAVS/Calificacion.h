@@ -30,6 +30,6 @@ public:           //Metodos
     float getCalificacionJuradoDos();
 	void setCalificacionJuradoDos(float calificacionJuradoDos);
 	string getComentarios();
-    void setComentarios ();
+    void setComentarios (string comentarios);
 };
 #endif /* !CALIFICACION_H */
