@@ -34,5 +34,6 @@ public:
 	void modificarCriterio();
 	void agregarActa();
 	void calificarActa();
+	void mostrarActa();
 };
 #endif

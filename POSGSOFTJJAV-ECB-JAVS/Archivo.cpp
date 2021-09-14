@@ -134,5 +134,28 @@ void Archivo::agregarActa(){
 }
 
 void Archivo::calificarActa(){
-    cout << "Ingrese el numero del acta";
+    cout << "Ingrese el numero del acta: ";
+}
+
+void Archivo::mostrarActa(){
+    int numActa;
+    for(map<int, Acta>::iterator pActa = actas.begin(); pActa != actas.end(); pActa++){
+        Acta temp = pActa->second;
+        cout << "Digite el numero de acta que desea mostrar: ";
+        cin >> numActa;
+        if(temp.getNumActa() == numActa){
+            cout << "ACTA #" << temp.getNumActa();
+            cout << "\nFecha: " << temp.getFecha();
+            cout << "\nAutor: " << temp.getNombreEstudiante();
+            cout << "\nNombre del trabajo: " << temp.getNombreTrabajo();
+            cout << "\nTipo de trabajo: " << temp.getTipoTrabajo();
+            cout << "\nNombre Director: " << temp.getNombreDirector();
+            cout << "\nNombre Codirector: " << temp.getNombreCoDirector();
+            cout << "\nNombre Jurado #1: " << temp.getNombreJuradoUno();
+            cout << "\nNombre Jurado #2: " << temp.getNombreJuradoDos();
+            cout << "\nComentarios: " << temp.getComentariosGenerales();
+            cout << "\nEstado del Trabajo: " << temp.getEstado();
+            cout << "\nNota Final: " << temp.getNotaFinal();
+        }
+    }
 }

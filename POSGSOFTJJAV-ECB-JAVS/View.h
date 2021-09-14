@@ -14,8 +14,7 @@ using std::string;
 //Definicion de la clase view
 class View{ 
 private:
-	Acta Acta;
-
+	Archivo archivoTesis;
 public:		
 	View();
 	void mostrarMenu();

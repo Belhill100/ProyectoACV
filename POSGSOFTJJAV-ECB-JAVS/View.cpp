@@ -26,10 +26,9 @@ void View::mostrarMenu(){
                     switch (opcionMenuSecundario)
                     {
                     case 1:
-
+                        archivoTesis.agregarActa();
                         break;
                     case 2:
-                    
                         break;
                     case 3:
                         break;
@@ -46,10 +45,10 @@ void View::mostrarMenu(){
                     switch (opcionMenuSecundario)
                     {
                     case 1:
-
+                        archivoTesis.modificarCriterio();
                         break;
                     case 2:
-                    
+
                         break;
                     case 3:
                         break;
@@ -65,10 +64,10 @@ void View::mostrarMenu(){
                     switch (opcionMenuSecundario)
                     {
                     case 1:
-
+                        archivoTesis.calificarActa();
                         break;
                     case 2:
-                    
+                        archivoTesis.mostrarActa();
                         break;
                     case 3:
                         break;
