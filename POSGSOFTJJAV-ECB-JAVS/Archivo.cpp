@@ -37,17 +37,42 @@ void Archivo::agregarCriterio(Criterio criterio){
     criterios.push_back(criterio);
 }
 
-void Archivo::eliminarCriterio(int id){
-    criterios.erase(criterios.begin() + id);
+int Archivo::getNumActas(){
+    return numActas;
 }
 
-void Archivo::cambiarPorcentaje(int id, float porcentaje){
-    criterios[id].setPorcentaje(porcentaje);
+void Archivo::modificarCriterio(){
+    int opc, id;
+    float porcentaje;
+    string texto;
+    cout << "Ingrese el id del criterio que desea modificar: ";
+    cin >> id;
+    cout << "Desea modificar el porcentaje? 1.Si 0.No \nOPC: ";
+    cin >> opc;
+    if(opc == 1){
+        cout << "Digite el nuevo porcentaje: ";
+        cin >> porcentaje;
+        for(map<int, Criterio>::iterator pCriterio = criterios.begin(); pCriterio != criterios.end(); pCriterio++){
+		    Criterio temp = pCriterio->second;
+		    if(temp.getID() == id){
+			    temp.setPorcentaje(porcentaje);
+		    }
+        }
+    }
+    cout << "Desea modificar el texto? 1.Si 0.No \nOPC: ";
+    cin >> opc;
+    if(opc == 1){
+        cout << "Digite el nuevo texto: ";
+        getline(cin, texto);
+        for(map<int, Criterio>::iterator pCriterio = criterios.begin(); pCriterio != criterios.end(); pCriterio++){
+		    Criterio temp = pCriterio->second;
+		    if(temp.getID() == id){
+			    temp.setTexto(texto);
+		    }
+        }
+    }   
 }
 
-void Archivo::cambiarTexto(int id, string texto){
-    criterios[id].setTexto(texto);
-}
 
 void Archivo::agregarActa(string fecha, string nombreEstudiante, string nombreTrabajo,
     TipoTrabajo tipoTrabajo, string nombreDirector, string nombreCoDirector, string nombreJuradoUno,

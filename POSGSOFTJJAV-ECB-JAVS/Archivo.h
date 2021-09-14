@@ -30,11 +30,8 @@ public:
 	string getNombre();
 	void setNombre(string nombre);
 	int getNumActas();
-	int getNumCriterios();
-	void agregarCriterio(Criterio criterio);
-	void eliminarCriterio(int index);
-	void cambiarPorcentaje(int id, float porcentaje);
-	void cambiarTexto(int id, string texto);
+	void agregarCriterio();
+	void modificarCriterio();
 	void agregarActa(string fecha, string nombreEstudiante, string nombreTrabajo,
     TipoTrabajo tipoTrabajo, string nombreDirector, string nombreCoDirector, string nombreJuradoUno,
     string nombreJuradoDos, string comentariosGenerales, Estado estado);
