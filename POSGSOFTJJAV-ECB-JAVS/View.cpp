@@ -6,9 +6,10 @@ View::View(){
 
 void View::mostrarMenu(){
     int opcionMenuPrincipal, opcionMenuSecundario;
+    archivoTesis.leerResumenes();
     cout << "Menu\n";
     cout << "Digite la opcion segun su tipo de usuario.\n";
-    cout << "1. Asistente de posgrado. \n2. Director(a). \n3. Jurado(a). \nOPC: ";
+    cout << "1. Asistente de posgrado. \n2. Director(a). \n3. Jurado(a). 0. Salir del programa \nOPC: ";
     cin >> opcionMenuPrincipal;
     do{
         // Menu principal para escoger el rol
@@ -60,4 +61,5 @@ void View::mostrarMenu(){
                 break;
         }
     } while (opcionMenuPrincipal != 0);
+    archivoTesis.resumenActas();
 }
