@@ -16,6 +16,8 @@ using std::string;
 using std::vector;
 using std::iterator;
 using std::map;
+using std::ofstream;
+using std::ios;
 
 class Archivo{
 private:

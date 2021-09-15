@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Archivo.h"
+#include <fstream>
 
 Archivo::Archivo(){
     this->nombre = "Tesis";
@@ -147,23 +148,30 @@ void Archivo::calificarActa(){
 
 void Archivo::mostrarActa(){
     int numActa;
+    ofstream acta;
+    acta.open("acta.txt", ios::out);
     cout << "Digite el numero de acta que desea mostrar: ";
     cin >> numActa;
     Acta temp = actas[numActa];
-
-    cout << "ACTA #" << temp.getNumActa();
-    cout << "\nFecha: " << temp.getFecha();
-    cout << "\nAutor: " << temp.getNombreEstudiante();
-    cout << "\nNombre del trabajo: " << temp.getNombreTrabajo();
-    cout << "\nTipo de trabajo: " << temp.getTipoTrabajo();
-    cout << "\nNombre Director: " << temp.getNombreDirector();
-    cout << "\nNombre Codirector: " << temp.getNombreCoDirector();
-    cout << "\nNombre Jurado #1: " << temp.getNombreJuradoUno();
-    cout << "\nNombre Jurado #2: " << temp.getNombreJuradoDos();
-    
-    cout << "\nComentarios: " << temp.getComentariosGenerales();
-    cout << "\nEstado del Trabajo: " << temp.getEstado();
-    cout << "\nNota Final: " << temp.getNotaFinal();
+    acta << "ACTA #" << temp.getNumActa();
+    acta << "\nFecha: " << temp.getFecha();
+    acta << "\nAutor: " << temp.getNombreEstudiante();
+    acta << "\nNombre del trabajo: " << temp.getNombreTrabajo();
+    acta << "\nTipo de trabajo: " << temp.getTipoTrabajo();
+    acta << "\nNombre Director: " << temp.getNombreDirector();
+    acta << "\nNombre Codirector: " << temp.getNombreCoDirector();
+    acta << "\nNombre Jurado #1: " << temp.getNombreJuradoUno();
+    acta << "\nNombre Jurado #2: " << temp.getNombreJuradoDos();
+    for (map<int, Criterio>::iterator pCriterio = criterios.begin(); pCriterio != criterios.end(); pCriterio++){
+        Criterio temp = pCriterio->second;
+        acta << "\nEl criterio " << temp.getID();
+        acta << " que representa " << temp.getTexto();
+        acta << " tiene un porcentaje de " << temp.getPorcentaje() * 100 << "%";
+    }
+    acta << "\nComentarios: " << temp.getComentariosGenerales();
+    acta << "\nEstado del Trabajo: " << temp.getEstado();
+    acta << "\nNota Final: " << temp.getNotaFinal();
+    acta.close();
 
 }
 
