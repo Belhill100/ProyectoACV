@@ -4,7 +4,7 @@
 Archivo::Archivo(){
     this->nombre = "Tesis";
 
-    Criterio criterioUno(1, "Manejo de Bibliografia", 0.10);
+    Criterio criterioUno(1, "Manejo de Bibliografia", 0.10);// se inicializan los criterios bases
     Criterio criterioDos(2, "Coherencia y Cohesion", 0.15);
     Criterio criterioTres(3, "Desarrollo del tema principal", 0.10);
     Criterio criterioCuatro(4, "Conclusiones Finales", 0.15);
@@ -37,7 +37,7 @@ void Archivo::agregarCriterio(){
     string texto;
     for(map<int, Criterio>::iterator pCriterio = criterios.begin(); pCriterio != criterios.end(); pCriterio++){
         Criterio temp = pCriterio->second;
-        cout << "Ingrese el porcentaje del criterio " << temp.getTexto() << ": ";
+        cout << "Ingrese el porcentaje del criterio " << temp.getTexto() << ": ";//toca cambiar el porcentaje de todos para que de 100%
         cin >> porcentaje;
         temp.setPorcentaje(porcentaje);
         cont++;
@@ -128,7 +128,7 @@ void Archivo::agregarActa(){
         actTemporal.setTipoTrabajo(APLICADO);
     }
     for(map<int, Criterio>::iterator pCriterio = criterios.begin(); pCriterio != criterios.end(); pCriterio++){
-        actTemporal.asignarCalificacion(pCriterio->second);
+        actTemporal.asignarCalificacion(pCriterio->second);//se le asigna un criterio a cada calificacion
     }
     actas[actTemporal.getNumActa()] = actTemporal;
 }
