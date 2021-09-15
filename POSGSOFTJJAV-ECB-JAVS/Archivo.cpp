@@ -206,7 +206,6 @@ void Archivo::resumenActas(){
         cout << "\nNombre Jurado #2: " << temp.getNombreJuradoDos();
         cout << "\nEstado del Trabajo: " << temp.getEstado();
         cout << "\nNota Final: " << temp.getNotaFinal();
-
     }
     resumenFile.close();
 }
