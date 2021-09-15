@@ -14,10 +14,6 @@ using std::endl;
 using std::string;
 using std::vector;
 
-typedef enum{
-   APLICADO, INVESTIGACION
-}tipoTrabajo;
-
 class Criterio{
 private: //Atributos
 	int ID;

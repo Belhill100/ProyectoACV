@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream> //libreria para crear y exportar a .txt
 #include <vector>
 #include <map>
 #include <iterator>
