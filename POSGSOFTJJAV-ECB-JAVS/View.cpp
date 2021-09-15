@@ -30,8 +30,7 @@ void View::mostrarMenu(){
                 }while (opcionMenuSecundario != 0);
                 break;
             case 2:
-                do
-                {   //Menu secundario con las funcionalidades para ese rol
+                do{   //Menu secundario con las funcionalidades para ese rol
                     cout << "Menu Director(a).\n";
                     cout << "1. Modificar criterios. \n2. Ver historicos\n0. Salir\n";
                     cin >> opcionMenuSecundario;
