@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Archivo.h"
-#include <fstream>
 
 Archivo::Archivo(){
     this->nombre = "Tesis";
@@ -197,4 +196,38 @@ void Archivo::resumenActas(){
         resumenFile << temp.getNotaFinal() << ",";
     }
     resumenFile.close();
+}
+
+void Archivo::leerResumenes(){
+    Acta temp;
+    ifstream resumen(NOMBRE_ARCHIVO);
+    string linea;
+    char delimitador = ',';
+    getline(resumen, linea);
+    while (getline(resumen, linea)){
+        stringstream stream(linea);
+        string numActa, fecha, autor, nombreDirector, nombreJurado1, nombreJurado2, estado, notaFinal;
+        float nota;
+        getline(stream, numActa, delimitador);
+        getline(stream, fecha, delimitador);
+        getline(stream, autor, delimitador);
+        getline(stream, nombreDirector, delimitador);
+        getline(stream, nombreJurado1, delimitador);
+        getline(stream, nombreJurado2, delimitador);
+        getline(stream, estado, delimitador);
+        getline(stream, notaFinal, delimitador);
+        nota = std::stof(notaFinal); 
+        temp.setNotaFinal(nota);
+        temp.setFecha(fecha);
+        temp.setNombreEstudiante(autor);
+        temp.setNombreDirector(nombreDirector);
+        temp.setNombreJuradoUno(nombreJurado1);
+        temp.setNombreJuradoDos(nombreJurado2);
+        if (estado == "APROBADO"){
+            temp.setEstado(APROBADO);
+        }else{
+            temp.setEstado(REPROBADO);
+        }
+        
+    }
 }
