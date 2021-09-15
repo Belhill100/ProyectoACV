@@ -199,6 +199,7 @@ void Archivo::resumenActas(){
 }
 
 void Archivo::leerResumenes(){
+    int num;
     Acta temp;
     ifstream resumen(NOMBRE_ARCHIVO);
     string linea;
@@ -228,6 +229,6 @@ void Archivo::leerResumenes(){
         }else{
             temp.setEstado(REPROBADO);
         }
-        
+        actas[temp.getNumActa()] = temp;        
     }
 }
