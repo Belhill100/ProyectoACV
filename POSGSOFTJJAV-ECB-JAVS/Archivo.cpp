@@ -93,7 +93,7 @@ void Archivo::agregarActa(){
     string temporal;
     actTemporal.setNumActa(numActas);
     numActas++;
-    fflush;
+    getline(cin,temporal);
     cout << "Ingrese la fecha : ";
     getline(cin, temporal);
     actTemporal.setFecha(temporal);
