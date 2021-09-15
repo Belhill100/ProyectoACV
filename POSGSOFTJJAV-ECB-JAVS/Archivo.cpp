@@ -134,7 +134,11 @@ void Archivo::agregarActa(){
 }
 
 void Archivo::calificarActa(){
+    int numActa;
     cout << "Ingrese el numero del acta: ";
+    cin >> numActa;
+    Acta temp = actas[numActa];
+    temp.calificarActa();
 }
 
 void Archivo::mostrarActa(){
