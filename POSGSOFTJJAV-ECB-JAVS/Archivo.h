@@ -8,6 +8,7 @@
 #include <vector>
 #include <map>
 #include <iterator>
+#include <cstdlib>
 #include "Acta.h"
 #include "Criterio.h"
 #define NOMBRE_ARCHIVO "Resumen.csv"
