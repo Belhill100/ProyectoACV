@@ -177,6 +177,14 @@ void Archivo::mostrarActa(){
 
 void Archivo::resumenActas(){
     int numActa;
+    fstream resumenFile;
+    fstream ReadFile("Resumen.csv", ios::in);
+    if(!ReadFile){
+        fstream CreateFile("Resumen.csv", ios::out);
+        CreateFile << "#Acta,Fecha,Autor,NombreDirector,NombreJurado1,NombreJurado2,Estado,NotaFinal" <<endl;
+    }
+
+    resumenFile.open("Resumen.csv", ios::app);
     for(map<int, Acta>::iterator pActa = actas.begin(); pActa != actas.end(); pActa++){
         Acta temp = pActa->second;
         cout << "ACTA #" << temp.getNumActa();
@@ -188,4 +196,5 @@ void Archivo::resumenActas(){
         cout << "\nEstado del Trabajo: " << temp.getEstado();
         cout << "\nNota Final: " << temp.getNotaFinal();
     }
+    resumenFile.close();
 }
