@@ -21,7 +21,7 @@ void View::mostrarMenu(){
                 do
                 {   //Menu secundario con las funcionalidades para ese rol
                     cout << "Menu Asistente de posgrado.\n";
-                    cout << "1. Crear acta. \n2. Ver historicos\n 3. Salir\n";
+                    cout << "1. Crear acta. \n2. Ver historicos\n3. Salir\nOPC: ";
                     cin >> opcionMenuSecundario;
                     switch (opcionMenuSecundario)
                     {
