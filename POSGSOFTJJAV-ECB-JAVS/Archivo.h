@@ -18,6 +18,7 @@ using std::iterator;
 using std::map;
 using std::ofstream;
 using std::ios;
+using std::fstream;
 
 class Archivo{
 private:
