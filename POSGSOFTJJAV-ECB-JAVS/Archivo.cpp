@@ -187,14 +187,14 @@ void Archivo::resumenActas(){
     resumenFile.open("Resumen.csv", ios::app);
     for(map<int, Acta>::iterator pActa = actas.begin(); pActa != actas.end(); pActa++){
         Acta temp = pActa->second;
-        cout << "ACTA #" << temp.getNumActa();
-        cout << "\nFecha: " << temp.getFecha();
-        cout << "\nAutor: " << temp.getNombreEstudiante();
-        cout << "\nNombre Director: " << temp.getNombreDirector();
-        cout << "\nNombre Jurado #1: " << temp.getNombreJuradoUno();
-        cout << "\nNombre Jurado #2: " << temp.getNombreJuradoDos();
-        cout << "\nEstado del Trabajo: " << temp.getEstado();
-        cout << "\nNota Final: " << temp.getNotaFinal();
+        resumenFile << temp.getNumActa() << ",";
+        resumenFile << temp.getFecha() << ",";
+        resumenFile << temp.getNombreEstudiante() << ",";
+        resumenFile << temp.getNombreDirector() << ",";
+        resumenFile << temp.getNombreJuradoUno() << ",";
+        resumenFile << temp.getNombreJuradoDos() << ",";
+        resumenFile << temp.getEstado() << ",";
+        resumenFile << temp.getNotaFinal() << ",";
     }
     resumenFile.close();
 }
