@@ -196,6 +196,17 @@ void Archivo::resumenActas(){
         resumenFile << temp.getNombreJuradoDos() << ",";
         resumenFile << temp.getEstado() << ",";
         resumenFile << temp.getNotaFinal() << ",";
+
+        cout << "\n=======================================\n";
+        cout << "ACTA #" << temp.getNumActa();
+        cout << "\nFecha: " << temp.getFecha();
+        cout << "\nAutor: " << temp.getNombreEstudiante();
+        cout << "\nNombre Director: " << temp.getNombreDirector();
+        cout << "\nNombre Jurado #1: " << temp.getNombreJuradoUno();
+        cout << "\nNombre Jurado #2: " << temp.getNombreJuradoDos();
+        cout << "\nEstado del Trabajo: " << temp.getEstado();
+        cout << "\nNota Final: " << temp.getNotaFinal();
+
     }
     resumenFile.close();
 }
