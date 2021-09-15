@@ -19,7 +19,7 @@ private: //Atributos
 	float calificacionJuradoDos;
 	string comentarios;
 
-public:           //Metodos
+public:           
 	Calificacion(); //Constructor
     Calificacion(Criterio criterio, float calificacionJuradoUno, float calificacionJuradoDos, string comentarios);
 	// Gets and sets

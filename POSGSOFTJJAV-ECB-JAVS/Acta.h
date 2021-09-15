@@ -44,10 +44,10 @@ public:           //Metodos
     Acta(string fecha, string nombreEstudiante, string nombreTrabajo,
     TipoTrabajo tipoTrabajo, string nombreDirector, string nombreCoDirector, string nombreJuradoUno,
     string nombreJuradoDos, string comentariosGenerales, Estado estado, float notaFinal);
-    //Se calcula la nota final teniendo en cuenta las calificaciones parciales y porcentajes
-    void calcularNota();
+    //metodos
+    void calcularNota();//Se calcula la nota final teniendo en cuenta las calificaciones parciales y porcentajes
     void asignarCalificacion(Criterio criterio);
-    void calificarActa();
+    void calificarActa();//se califica el acta
 	// Gets and sets
     string getFecha();
     void setFecha(string fecha);

@@ -26,15 +26,18 @@ private:
     map<int, Acta> actas; 
 
 public:		
+	//constructores
 	Archivo();
 	Archivo(string nombre); 
+	//gets/sets
 	string getNombre();
 	void setNombre(string nombre);
 	int getNumActas();
+	//metodos
 	void agregarCriterio();
 	void modificarCriterio();
 	void agregarActa();
-	void calificarActa();
+	void calificarActa();//busca un acta y la califica
 	void mostrarActa();
 	void resumenActas();
 };

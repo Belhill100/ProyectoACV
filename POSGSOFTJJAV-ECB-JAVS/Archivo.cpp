@@ -120,6 +120,10 @@ void Archivo::agregarActa(){
     getline(cin, temporal);
     actTemporal.setNombreJuradoDos(temporal);
     fflush;
+    cout << "Ingrese comentarios adicionales si lo desea : ";
+    getline(cin, temporal);
+    actTemporal.setComentariosGenerales(temporal);
+    fflush;
     cout << "Ingrese 1 si el trabajo es de investigacion o 0 si es aplicado : ";
     cin >> tipo;
     if (tipo == 1){
