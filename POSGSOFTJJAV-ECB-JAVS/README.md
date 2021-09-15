@@ -20,3 +20,5 @@ Esta funcionalidad permite generar un reporte con el acta y guardarla en un arch
 Esta funcion le permite al director modificar los criterios para una calificacion.
 #### 5.Ver Historicos
 Como la directora a veces necesita ver un resumen de las actas, esta funcionalidad le permite obtener un resumen de las actas creadas y calificadas, este resumen se guarda en un archivo cuando termina el programa y se carga cuando se incia.
+
+![Diagrama de clases](https://raw.githubusercontent.com/Belhill100/ProyectoACV/master/Diagrama%20de%20Clases.png)
