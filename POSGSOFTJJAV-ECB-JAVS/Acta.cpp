@@ -26,6 +26,7 @@ Acta::Acta(string fecha, string nombreEstudiante, string nombreTrabajo,
 void Acta::calcularNota(){
     float nota = 0;
     Criterio critTemporal;
+    string res;
     for (vector<Calificacion>::iterator pCalificacion = calificaciones.begin();
         pCalificacion != calificaciones.end(); pCalificacion++){
     critTemporal = pCalificacion->getCriterio();
@@ -34,10 +35,12 @@ void Acta::calcularNota(){
     notaFinal = nota;
     if (notaFinal > 3.5){
         estado = APROBADO;
+        res = "aprobado";
     }else{
         estado = REPROBADO;
+        res = "reprobado";
     }
-    cout << "La calificacion final es de " << notaFinal << "y el trabajo fue " << estado;
+    cout << "La calificacion final es de " << notaFinal << " y el trabajo fue " << res << "\n";
 }
 	
 void Acta::asignarCalificacion(Criterio criterio){
@@ -53,15 +56,16 @@ void Acta::calificarActa(){
     for (vector<Calificacion>::iterator pCalificacion = calificaciones.begin();
 		 pCalificacion != calificaciones.end(); pCalificacion++){
         critTemp =  pCalificacion->getCriterio();
-		cout << "Ingrese la calificacion del criterio " << critTemp.getID() << "del jurado uno : ";
+		cout << "Ingrese la calificacion del criterio " << critTemp.getID() << " del jurado uno : ";
         cin >> calUno;
         pCalificacion->setCalificacionJuradoUno(calUno);
-        cout << "Ingrese la calificacion del criterio " << critTemp.getID() << "del jurado dos : ";
+        cout << "Ingrese la calificacion del criterio " << critTemp.getID() << " del jurado dos : ";
         cin >> calDos;
         pCalificacion->setCalificacionJuradoDos(calDos);
+        fflush;
         cout << "Ingrese los comentarios para este criterio : ";
         getline(cin, text);
-        fflush;
+        cout << "\n";
         pCalificacion->setComentarios(text);
 	    }
     calcularNota();

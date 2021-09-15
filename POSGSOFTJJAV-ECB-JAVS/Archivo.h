@@ -28,7 +28,6 @@ class Archivo{
 private:
 	string nombre;
 	int numActas;
-	int numCriterios;
 	map<int, Criterio> criterios;
     map<int, Acta> actas; 
 

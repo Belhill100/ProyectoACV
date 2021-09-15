@@ -3,6 +3,7 @@
 
 Archivo::Archivo(){
     this->nombre = "Tesis";
+    this->numActas = 0;
 
     Criterio criterioUno(1, "Manejo de Bibliografia", 0.10);// se inicializan los criterios bases
     Criterio criterioDos(2, "Coherencia y Cohesion", 0.15);
@@ -92,6 +93,7 @@ void Archivo::agregarActa(){
     string temporal;
     actTemporal.setNumActa(numActas);
     numActas++;
+    fflush;
     cout << "Ingrese la fecha : ";
     getline(cin, temporal);
     actTemporal.setFecha(temporal);
