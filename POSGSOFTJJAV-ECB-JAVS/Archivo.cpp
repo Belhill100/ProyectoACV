@@ -3,6 +3,7 @@
 
 Archivo::Archivo(){
     this->nombre = "Tesis";
+    this->numActas = 0;
 
     Criterio criterioUno(1, "Manejo de Bibliografia", 0.10);// se inicializan los criterios bases
     Criterio criterioDos(2, "Coherencia y Cohesion", 0.15);
@@ -92,6 +93,7 @@ void Archivo::agregarActa(){
     string temporal;
     actTemporal.setNumActa(numActas);
     numActas++;
+    fflush;
     cout << "Ingrese la fecha : ";
     getline(cin, temporal);
     actTemporal.setFecha(temporal);
@@ -194,6 +196,17 @@ void Archivo::resumenActas(){
         resumenFile << temp.getNombreJuradoDos() << ",";
         resumenFile << temp.getEstado() << ",";
         resumenFile << temp.getNotaFinal() << ",";
+
+        cout << "\n=======================================\n";
+        cout << "ACTA #" << temp.getNumActa();
+        cout << "\nFecha: " << temp.getFecha();
+        cout << "\nAutor: " << temp.getNombreEstudiante();
+        cout << "\nNombre Director: " << temp.getNombreDirector();
+        cout << "\nNombre Jurado #1: " << temp.getNombreJuradoUno();
+        cout << "\nNombre Jurado #2: " << temp.getNombreJuradoDos();
+        cout << "\nEstado del Trabajo: " << temp.getEstado();
+        cout << "\nNota Final: " << temp.getNotaFinal();
+
     }
     resumenFile.close();
 }
