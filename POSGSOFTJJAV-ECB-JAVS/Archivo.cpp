@@ -218,6 +218,7 @@ void Archivo::leerResumenes(){
         getline(stream, estado, delimitador);
         getline(stream, notaFinal, delimitador);
         num = atoi(numActa.c_str());
+        temp.setNumActa(num);
         nota = std::stof(notaFinal); 
         temp.setNotaFinal(nota);
         temp.setFecha(fecha);
