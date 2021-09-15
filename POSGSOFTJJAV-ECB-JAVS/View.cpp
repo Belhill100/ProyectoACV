@@ -11,7 +11,7 @@ void View::mostrarMenu(){
         // Menu principal para escoger el rol
         cout << "Menu\n";
         cout << "Digite la opcion segun su tipo de usuario.\n";
-        cout << "1. Asistente de posgrado. \n2. Director(a). \n3. Jurado(a). 0. Salir \nOPC: ";
+        cout << "1. Asistente de posgrado. \n2. Director(a). \n3. Jurado(a)\n 0. Salir \nOPC: ";
         cin >> opcionMenuPrincipal;
         switch (opcionMenuPrincipal){
             case 1:
